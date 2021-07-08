@@ -1,24 +1,11 @@
 import {useState,useEffect} from 'react';
 import BlogList from './bloglist';
+import useFetch from './useFetch'
 const Home = () => {
-
-    const[blogs,setBlogs] = useState(null)
-    const[isPending, setIsPending] =useState(true);
-
-    useEffect(() => {
-        setTimeout(() => {
-            fetch('http://localhost:5000/blogs')
-                .then(res => {
-                return res.json();
-                })
-                .then(data => {
-                setBlogs(data);
-                setIsPending(false);
-                })
-        }, 100)
-    }, [])
+    const {data:blogs, isPending, error}=useFetch('http://localhost:5000/blogs')
     return (  
         <div className="home">
+            {error && <div>{error}</div>}
             {isPending && <div>Loading...</div> }
            {blogs && <BlogList blogs={blogs} title='All Blogs!'/>}
         </div>
