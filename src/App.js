@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './navbar';
 import Home from './Home';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-import create from './create';
+import Create from './create';
 function App() {
   return (
     <Router>
@@ -14,7 +14,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/create">
-            <create />
+            <Create />
           </Route>
         </Switch>
       </div>
