@@ -11,7 +11,7 @@ const Create = () => {
     return ( 
         <div className="create">
             <h2>Add a New Blog</h2>
-            <form onSubmit={}>
+            <form onSubmit={handleSubmit}>
                 <label>Blog Title:</label>
                 <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required/>
                 <label>Blog Body:</label>
