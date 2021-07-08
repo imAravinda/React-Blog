@@ -4,5 +4,4 @@ const BlogDetails = () => {
      );
 }
  
-export default BlogDetai
-<h2>Blog Details</h2>ls;
+export default BlogDetails
