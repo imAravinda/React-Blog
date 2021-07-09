@@ -13,7 +13,7 @@ const Create = () => {
             headers: {"Content-type":"application/json"},
             body: JSON.stringify(blog)
         }).then(() => {
-            setIsPending(true);
+            setIsPending(false);
         })
     }
     return ( 
