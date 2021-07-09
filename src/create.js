@@ -9,9 +9,9 @@ const Create = () => {
         const blog={ title, body, author};
         setIsPending(true);
         fetch('http://localhost:5000/blogs',{
-            method: 'POST';
+            method: 'POST',
             headers: {"Content-type":"application/json"},
-            body: JSON.stringify(blog);
+            body: JSON.stringify(blog)
         }).then(() => {
             setIsPending(true);
         })
