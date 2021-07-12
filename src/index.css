@@ -25,6 +25,7 @@
   color: #f1356d;
 }
 .content{
+  display: block;
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
